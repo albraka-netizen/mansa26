@@ -237,7 +237,7 @@
     <div id="info-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
         <div class="bg-white dark:bg-maladhCard rounded-3xl max-w-xs w-full p-6 text-center border border-emeraldAncient/20 dark:border-emeraldLight/40 shadow-2xl space-y-4 relative">
             <div class="w-20 h-20 rounded-full mx-auto p-1 bg-gradient-to-tr from-emeraldAncient via-emeraldLight to-emeraldDark emerald-glow">
-                <img id="modal-shop-image" src="" class="w-full h-full rounded-full object-cover">
+                <img id="modal-shop-image" src="" alt="شعار المحل" class="w-full h-full rounded-full object-cover">
             </div>
             <div>
                 <h3 id="modal-shop-name" class="text-lg font-black text-emeraldDark dark:text-white"></h3>
@@ -308,7 +308,7 @@
                     branchId: "al-laqiya",
                     category: "كافيهات",
                     description: "قهوة ذات جودة عالية ونكهة خاصة لأصحاب الذوق الرفيع.",
-                    image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1000&auto=format&fit=crop",
+                    image: "images/5.png",
                     url: "https://albraka-netizen.github.io/coffeeok/",
                     isVIP: false,
                     isPending: false,
@@ -319,7 +319,7 @@
                     id: 4,
                     name: "دكانة طنقر",
                     branchId: "al-laqiya",
-                    category: "متاجر",
+                    category: "سوپرماركت",
                     description: "يتم تجهيز الصفحة الرسمية حالياً لتكون متاحة قريباً جداً عبر منصة مَلاذ.",
                     image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop",
                     url: "",
@@ -397,7 +397,7 @@
         }
 
         function renderCategories() {
-            const defaultCategories = ['الكل', 'مطاعم', 'كافيهات', 'سوبرماركت', 'متاجر', 'خدمات'];
+            const defaultCategories = ['الكل', 'مطاعم', 'كافيهات', 'سوپرماركت', 'متاجر', 'خدمات'];
             const container = document.getElementById('category-buttons');
             
             container.innerHTML = defaultCategories.map(cat => `
@@ -436,7 +436,7 @@
             if (matches.length > 0) {
                 dropdown.innerHTML = matches.map(shop => `
                     <div onclick="handleShopClick(${shop.id})" class="flex items-center gap-3 p-3 hover:bg-emeraldLight/10 dark:hover:bg-emeraldDark/40 cursor-pointer border-b border-emeraldAncient/10 dark:border-emeraldLight/20 last:border-none">
-                        <img src="${shop.image}" class="w-10 h-10 rounded-full object-cover">
+                        <img src="${shop.image}" alt="${shop.name}" class="w-10 h-10 rounded-full object-cover">
                         <div class="flex-1 text-right">
                             <h4 class="text-xs font-bold text-emeraldDark dark:text-white flex items-center gap-1">
                                 ${shop.name}
@@ -464,11 +464,11 @@
             if (shop.isPending) {
                 document.getElementById('modal-shop-name').textContent = shop.name;
                 document.getElementById('modal-shop-cat').textContent = shop.category;
-                document.getElementById('modal-shop-desc').textContent = " " + shop.description;
+                document.getElementById('modal-shop-desc').textContent = shop.description;
                 document.getElementById('modal-shop-image').src = shop.image;
                 
                 const openBtn = document.getElementById('modal-open-link');
-                openBtn.textContent = "الموقع قيد التجهيز ";
+                openBtn.textContent = "الموقع قيد التجهيز";
                 openBtn.onclick = null;
                 openBtn.className = "flex-1 bg-gray-300 dark:bg-white/20 text-gray-500 dark:text-gray-400 font-bold py-2.5 rounded-2xl text-xs cursor-not-allowed";
                 
@@ -542,7 +542,7 @@
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                             
                             <span class="absolute bottom-1 inset-x-0 text-center text-[8px] font-black text-white">
-                                ${shop.isPending ? ' قريباً' : ' ' + shop.rating}
+                                ${shop.isPending ? 'قريباً' : shop.rating}
                             </span>
                         </div>
 
