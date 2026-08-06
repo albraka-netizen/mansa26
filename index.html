@@ -230,7 +230,6 @@
         </div>
         <p class="text-center text-[10px] text-emerald-800 dark:text-emerald-100/60 font-bold mt-4">
             © 2026 نافذتك لاكتشاف أفضل ما في اللقية.
-        
         </p>
     </footer>
 
@@ -279,48 +278,48 @@
             shops: [
                 {
                     id: 1,
-                    name: " مكسيكاني",
+                    name: "مكسيكاني",
                     branchId: "al-laqiya",
-                    category: " مطاعم",
+                    category: "مطاعم",
                     description: "أشهى الوجبات والمأكولات المكسيكية المميزة بتتبيلات فريدة.",
                     image: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=1000&auto=format&fit=crop",
                     url: "https://albraka-netizen.github.io/mak/",
                     isVIP: false,
                     isPending: false,
-                  rating: "",
+                    rating: "",
                     hasPreviewModal: false
                 },
                 {
                     id: 2,
                     name: "كافيه مَلاذ",
                     branchId: "al-laqiya",
-                    category: " كافيهات",
-                    description: "   كافيه مَلاذ هو النموذج الافتراضي  الذي صممه فريق مَلاذ الرقمي بنفس اسمه، ليكون واجهة استعراضية حية توضح لأصحاب المحلات كيف يمكن أن يبدو كافيه أحلامهم مستقبلاً بلمسة تقنية وعصرية.",
+                    category: "كافيهات",
+                    description: "كافيه مَلاذ هو النموذج الافتراضي الذي صممه فريق مَلاذ الرقمي بنفس اسمه، ليكون واجهة استعراضية حية توضح لأصحاب المحلات كيف يمكن أن يبدو كافيه أحلامهم مستقبلاً بلمسة تقنية وعصرية.",
                     image: "https://images.unsplash.com/photo-1507133750040-4a8f57021571?q=80&w=1287&auto=format&fit=crop",
                     url: "https://albraka-netizen.github.io/coffe1/",
                     isVIP: true,
                     isPending: false,
-                  rating: "",
+                    rating: "",
                     hasPreviewModal: true
                 },
                 {
                     id: 3,
                     name: "كافيه عُكاظ",
                     branchId: "al-laqiya",
-                    category: " كافيهات",
+                    category: "كافيهات",
                     description: "قهوة ذات جودة عالية ونكهة خاصة لأصحاب الذوق الرفيع.",
-                    image: "images/5.png",
+                    image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1000&auto=format&fit=crop",
                     url: "https://albraka-netizen.github.io/coffeeok/",
                     isVIP: false,
                     isPending: false,
-                   rating: "",
+                    rating: "",
                     hasPreviewModal: false
                 },
                 {
                     id: 4,
                     name: "دكانة طنقر",
                     branchId: "al-laqiya",
-                    category: "حانوت",
+                    category: "متاجر",
                     description: "يتم تجهيز الصفحة الرسمية حالياً لتكون متاحة قريباً جداً عبر منصة مَلاذ.",
                     image: "https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop",
                     url: "",
@@ -398,7 +397,7 @@
         }
 
         function renderCategories() {
-            const defaultCategories = ['الكل', ' مطاعم', ' كافيهات', ' سوبرماركت', ' متاجر', ' خدمات'];
+            const defaultCategories = ['الكل', 'مطاعم', 'كافيهات', 'سوبرماركت', 'متاجر', 'خدمات'];
             const container = document.getElementById('category-buttons');
             
             container.innerHTML = defaultCategories.map(cat => `
@@ -508,7 +507,7 @@
             if (currentBranch && !currentBranch.active) {
                 container.innerHTML = `
                     <div class="col-span-full text-center py-10 px-4 maladh-glass rounded-3xl shadow-xl">
-                        <span class="text-3xl mb-2 inline-block"></span>
+                        <span class="text-3xl mb-2 inline-block">⏳</span>
                         <h3 class="text-sm font-bold mb-1 text-emeraldDark dark:text-white">قريباً في فرع ${currentBranch.name}</h3>
                         <p class="text-emerald-800 dark:text-emerald-100/60 text-[10px] max-w-xs mx-auto mb-4 font-bold">يتم تجهيز فرع مَلاذ ليكون متاحاً قريباً جداً.</p>
                         <button onclick="contactOwner('تسجيل متجر بالفرع')" class="bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark font-bold px-4 py-2 rounded-full text-[10px]">
