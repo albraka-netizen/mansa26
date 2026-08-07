@@ -54,13 +54,13 @@
         }
 
         .maladh-glass {
-            background: rgba(255, 255, 255, 0.90);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(25px);
             -webkit-backdrop-filter: blur(25px);
             border: 1px solid rgba(27, 77, 62, 0.2);
         }
         .dark .maladh-glass {
-            background: rgba(16, 42, 34, 0.90);
+            background: rgba(16, 42, 34, 0.85);
             border: 1px solid rgba(45, 106, 79, 0.35);
         }
 
@@ -90,47 +90,47 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 dark:bg-emeraldDark text-gray-900 dark:text-white min-h-screen pb-24 transition-colors duration-500 selection:bg-emeraldLight selection:text-white">
+<body class="bg-gray-50 dark:bg-emeraldDark text-gray-900 dark:text-white min-h-screen pb-16 transition-colors duration-500 selection:bg-emeraldLight selection:text-white">
 
     <!-- شريط التنقل -->
-    <nav class="fixed top-3.5 inset-x-3.5 max-w-md mx-auto z-50 maladh-glass rounded-full shadow-xl px-5 py-3.5 flex justify-between items-center">
-        <div class="flex items-center gap-3.5">
+    <nav class="fixed top-3 inset-x-3 max-w-md mx-auto z-50 maladh-glass rounded-full shadow-xl px-4 py-2 flex justify-between items-center">
+        <div class="flex items-center gap-2.5">
             <div class="relative">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-emeraldAncient via-emeraldLight to-emeraldDark p-[2px] animate-pulse-slow">
-                    <div class="w-full h-full bg-white dark:bg-emeraldDark rounded-full flex items-center justify-center font-black text-emeraldAncient dark:text-white text-xl shadow-inner">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-emeraldAncient via-emeraldLight to-emeraldDark p-[2px] animate-pulse-slow">
+                    <div class="w-full h-full bg-white dark:bg-emeraldDark rounded-full flex items-center justify-center font-black text-emeraldAncient dark:text-white text-base shadow-inner">
                         🌿
                     </div>
                 </div>
             </div>
             <div>
-                <h1 class="font-black text-base tracking-wide text-emeraldAncient dark:text-white">فريق مَلاذ الرقمي</h1>
-                <p class="text-xs text-emerald-800 dark:text-emerald-100/80 flex items-center gap-1.5 font-bold mt-0.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emeraldLight animate-ping"></span>
+                <h1 class="font-black text-xs tracking-wider text-emeraldAncient dark:text-white">فريق مَلاذ الرقمي</h1>
+                <p class="text-[9px] text-emerald-800 dark:text-emerald-100/70 flex items-center gap-1 font-bold">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emeraldLight animate-ping"></span>
                     <span id="nav-branch-name">فرع اللقية</span>
                 </p>
             </div>
         </div>
 
-        <div class="flex items-center gap-3">
-            <button onclick="openBranchModal()" class="bg-emeraldAncient/10 dark:bg-white/10 hover:bg-emeraldLight/20 text-xs sm:text-sm font-bold px-4 py-2.5 rounded-full border border-emeraldAncient/20 dark:border-emeraldLight/30 text-emeraldAncient dark:text-white silk-transition flex items-center gap-1.5">
+        <div class="flex items-center gap-2">
+            <button onclick="openBranchModal()" class="bg-emeraldAncient/10 dark:bg-white/10 hover:bg-emeraldLight/20 text-[11px] font-bold px-3 py-1.5 rounded-full border border-emeraldAncient/20 dark:border-emeraldLight/30 text-emeraldAncient dark:text-white silk-transition flex items-center gap-1">
                 <span>📍</span> <span id="current-branch-badge">اللقية</span>
             </button>
-            <button onclick="toggleDarkMode()" class="p-3 rounded-full bg-emeraldAncient/10 dark:bg-white/10 text-base border border-emeraldAncient/20 dark:border-emeraldLight/30 text-emeraldAncient dark:text-white silk-transition active:scale-90">
+            <button onclick="toggleDarkMode()" class="p-2 rounded-full bg-emeraldAncient/10 dark:bg-white/10 text-xs border border-emeraldAncient/20 dark:border-emeraldLight/30 text-emeraldAncient dark:text-white silk-transition active:scale-90">
                 <span id="theme-icon">🌙</span>
             </button>
         </div>
     </nav>
 
     <!-- الهيدر والبحث -->
-    <header class="pt-32 pb-6 px-4 text-center max-w-md mx-auto">
-        <div class="inline-block mb-3.5 px-4 py-1.5 rounded-full bg-emeraldLight/10 dark:bg-emeraldLight/20 border border-emeraldLight/30 dark:border-emeraldLight/40 text-emeraldAncient dark:text-white text-xs sm:text-sm font-black tracking-widest uppercase">
+    <header class="pt-24 pb-4 px-4 text-center max-w-md mx-auto">
+        <div class="inline-block mb-2 px-3 py-1 rounded-full bg-emeraldLight/10 dark:bg-emeraldLight/20 border border-emeraldLight/30 dark:border-emeraldLight/40 text-emeraldAncient dark:text-white text-[10px] font-black tracking-widest uppercase">
             Maladh Network
         </div>
         
-        <h2 id="hero-title" class="text-3xl sm:text-4xl font-black mb-3 tracking-tight shimmer-text leading-tight">
+        <h2 id="hero-title" class="text-2xl font-black mb-1.5 tracking-tight shimmer-text">
             اكتشف اللقية في مكانٍ واحد
         </h2>
-        <p class="text-sm sm:text-base text-emerald-900 dark:text-emerald-100/90 mb-7 font-bold max-w-sm mx-auto leading-relaxed">
+        <p class="text-[11px] text-emerald-900 dark:text-emerald-100/80 mb-4 font-bold max-w-xs mx-auto leading-relaxed">
             وجهتك الشاملة لأشهر المطاعم، الكافيهات، والمتاجر المحلية بسهولة وسرعة.
         </p>
 
@@ -142,71 +142,71 @@
                 oninput="handleSearchInput()"
                 placeholder="ابحث في دليل مَلاذ للمحلات والخدمات..." 
                 autocomplete="off"
-                class="w-full py-4 pr-12 pl-4 rounded-2xl bg-white dark:bg-maladhCard border-2 border-emeraldAncient/20 dark:border-emeraldLight/40 focus:outline-none focus:ring-2 focus:ring-emeraldAncient dark:focus:ring-white text-sm sm:text-base shadow-xl silk-transition text-right text-emeraldDark dark:text-white placeholder-gray-400 dark:placeholder-emerald-100/60 font-semibold"
+                class="w-full py-3.5 pr-11 pl-4 rounded-2xl bg-white dark:bg-maladhCard border border-emeraldAncient/20 dark:border-emeraldLight/30 focus:outline-none focus:ring-2 focus:ring-emeraldAncient dark:focus:ring-white text-xs shadow-xl silk-transition text-right text-emeraldDark dark:text-white placeholder-gray-400 dark:placeholder-emerald-100/50"
             >
-            <span class="absolute right-4 top-4 text-emeraldAncient dark:text-white text-xl">🔍</span>
+            <span class="absolute right-4 top-3.5 text-emeraldAncient dark:text-white text-base">🔍</span>
 
-            <div id="suggestions-box" class="absolute inset-x-0 top-16 mt-1 bg-white/95 dark:bg-maladhCard/95 border border-emeraldAncient/20 dark:border-emeraldLight/40 rounded-2xl shadow-2xl overflow-hidden z-50 hidden backdrop-blur-xl max-h-72 overflow-y-auto text-right">
+            <div id="suggestions-box" class="absolute inset-x-0 top-14 mt-1 bg-white/95 dark:bg-maladhCard/95 border border-emeraldAncient/20 dark:border-emeraldLight/40 rounded-2xl shadow-2xl overflow-hidden z-50 hidden backdrop-blur-xl max-h-60 overflow-y-auto text-right">
             </div>
         </div>
     </header>
 
     <!-- البانر الإعلاني -->
-    <section class="max-w-md mx-auto px-4 mb-7">
-        <div id="ad-banner" class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emeraldAncient via-emeraldLight to-emeraldDark dark:from-emeraldAncient dark:via-maladhCard dark:to-emeraldDark border border-emeraldLight/30 p-5 sm:p-6 shadow-2xl animate-float">
+    <section class="max-w-md mx-auto px-4 mb-5">
+        <div id="ad-banner" class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-emeraldAncient via-emeraldLight to-emeraldDark dark:from-emeraldAncient dark:via-maladhCard dark:to-emeraldDark border border-emeraldLight/30 p-4 shadow-2xl animate-float">
             <div class="absolute -left-10 -bottom-10 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
             
-            <div class="relative z-10 flex items-center justify-between gap-3">
-                <div class="space-y-2 max-w-[62%]">
-                    <span class="bg-white/25 text-white text-xs font-black px-3 py-1 rounded-full border border-white/30">
+            <div class="relative z-10 flex items-center justify-between">
+                <div class="space-y-1 max-w-[70%]">
+                    <span class="bg-white/20 text-white text-[9px] font-black px-2 py-0.5 rounded-full border border-white/30">
                          أعلن عن مشروعك
                     </span>
-                    <h3 class="text-sm sm:text-base font-black text-white leading-snug">احصل على حضور مميز وواسع للزوار</h3>
-                    <p class="text-xs sm:text-sm text-emerald-100 font-medium">صفحة خاصة تُسهّل وصول الزبائن إليك.</p>
+                    <h3 class="text-xs font-black text-white leading-snug">احصل على حضور مميز وواسع للزوار</h3>
+                    <p class="text-[10px] text-emerald-100">صفحة خاصة تُسهّل وصول الزبائن إليك.</p>
                 </div>
-                <button onclick="contactOwner('استفسار عن إعلانات مَلاذ')" class="bg-white hover:bg-emerald-50 text-emeraldDark font-black text-xs sm:text-sm px-4 py-3.5 rounded-2xl shadow-lg silk-transition active:scale-95 whitespace-nowrap">
-                    احجز مكانك 
+                <button onclick="contactOwner('استفسار عن إعلانات مَلاذ')" class="bg-white hover:bg-emerald-50 text-emeraldDark font-black text-[10px] px-3.5 py-2 rounded-xl shadow-lg silk-transition active:scale-95 whitespace-nowrap">
+                    احجز مكانك الآن 
                 </button>
             </div>
         </div>
     </section>
 
     <!-- شريط الفئات -->
-    <section class="max-w-md mx-auto px-4 mb-6">
-        <div class="flex justify-between items-center mb-3 px-1">
-            <h3 class="text-sm sm:text-base font-black text-emeraldDark dark:text-white">تصفح حسب الفئة</h3>
-            <span class="text-xs sm:text-sm text-emeraldLight dark:text-emerald-100/90 font-bold flex items-center gap-1.5 animate-bounce-x">
+    <section class="max-w-md mx-auto px-4 mb-4">
+        <div class="flex justify-between items-center mb-2 px-1">
+            <h3 class="text-xs font-black text-emeraldDark dark:text-white">تصفح حسب الفئة</h3>
+            <span class="text-[10px] text-emeraldLight dark:text-emerald-100/70 font-bold flex items-center gap-1 animate-bounce-x">
                 <span>اسحب للطرف</span>
                 <span>◀</span>
             </span>
         </div>
 
         <div class="relative">
-            <div id="category-buttons" class="flex justify-start gap-3 overflow-x-auto pb-3 no-scrollbar scroll-smooth"></div>
-            <div class="absolute left-0 top-0 bottom-3 w-8 bg-gradient-to-r from-gray-50 dark:from-emeraldDark to-transparent pointer-events-none"></div>
+            <div id="category-buttons" class="flex justify-start gap-2.5 overflow-x-auto pb-2 no-scrollbar scroll-smooth"></div>
+            <div class="absolute left-0 top-0 bottom-2 w-8 bg-gradient-to-r from-gray-50 dark:from-emeraldDark to-transparent pointer-events-none"></div>
         </div>
     </section>
 
     <!-- شبكة العرض -->
     <main class="max-w-md mx-auto px-4">
-        <div id="shops-container" class="grid grid-cols-3 gap-y-8 gap-x-4 justify-items-center"></div>
+        <div id="shops-container" class="grid grid-cols-3 gap-y-6 gap-x-3 justify-items-center"></div>
     </main>
 
     <!-- مميزات المنصة -->
-    <section class="max-w-md mx-auto px-4 mt-10">
-        <div class="maladh-glass p-6 rounded-3xl border border-emeraldAncient/15 dark:border-emeraldLight/30 space-y-4">
-            <h3 class="text-sm sm:text-base font-black text-emeraldDark dark:text-white text-center">لماذا مَلاذ؟</h3>
-            <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm font-bold text-emeraldDark dark:text-emerald-100">
-                <div class="bg-white/60 dark:bg-emeraldDark/40 p-3.5 rounded-2xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-center">
+    <section class="max-w-md mx-auto px-4 mt-8">
+        <div class="maladh-glass p-4 rounded-3xl border border-emeraldAncient/15 dark:border-emeraldLight/30 space-y-3">
+            <h3 class="text-xs font-black text-emeraldDark dark:text-white text-center">لماذا مَلاذ؟</h3>
+            <div class="grid grid-cols-2 gap-2 text-[10px] font-bold text-emeraldDark dark:text-emerald-100">
+                <div class="bg-white/50 dark:bg-emeraldDark/40 p-2.5 rounded-xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-center">
                      تصميم عصري وأنيق
                 </div>
-                <div class="bg-white/60 dark:bg-emeraldDark/40 p-3.5 rounded-2xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-center">
+                <div class="bg-white/50 dark:bg-emeraldDark/40 p-2.5 rounded-xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-center">
                      وصول سريع للخدمات
                 </div>
-                <div class="bg-white/60 dark:bg-emeraldDark/40 p-3.5 rounded-2xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-center">
+                <div class="bg-white/50 dark:bg-emeraldDark/40 p-2.5 rounded-xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-center">
                  باركود جاهز لموقعك
                 </div>
-                <div class="bg-white/60 dark:bg-emeraldDark/40 p-3.5 rounded-2xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-center">
+                <div class="bg-white/50 dark:bg-emeraldDark/40 p-2.5 rounded-xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-center">
                      تصفح مريح للجميع
                 </div>
             </div>
@@ -214,41 +214,41 @@
     </section>
 
     <!-- الفوتر -->
-    <footer class="max-w-md mx-auto px-4 mt-12 mb-8">
-        <div class="maladh-glass p-7 rounded-3xl text-center space-y-4 relative overflow-hidden border border-emeraldAncient/20 dark:border-emeraldLight/30">
-            <div class="w-16 h-16 bg-emeraldLight/20 text-emeraldAncient dark:text-white rounded-full flex items-center justify-center text-3xl mx-auto border border-emeraldAncient/20 dark:border-white/20 shadow-inner">
+    <footer class="max-w-md mx-auto px-4 mt-8 mb-6">
+        <div class="maladh-glass p-6 rounded-3xl text-center space-y-3 relative overflow-hidden border border-emeraldAncient/20 dark:border-emeraldLight/30">
+            <div class="w-12 h-12 bg-emeraldLight/20 text-emeraldAncient dark:text-white rounded-full flex items-center justify-center text-2xl mx-auto border border-emeraldAncient/20 dark:border-white/20 shadow-inner">
                 🌿
             </div>
             <div>
-                <h3 class="font-black text-base sm:text-lg text-emeraldDark dark:text-white">انضم إلى مَلاذ</h3>
-                <p class="text-xs sm:text-sm text-emerald-800 dark:text-emerald-100/80 font-bold mt-1.5">اجعل مشروعك في اللقية ليصل للجميع بأفضل صورة.</p>
+                <h3 class="font-black text-sm text-emeraldDark dark:text-white">انضم إلى مَلاذ</h3>
+                <p class="text-[11px] text-emerald-800 dark:text-emerald-100/70 font-bold mt-1">اجعل مشروعك في اللقية ليصل للجميع بأفضل صورة.</p>
             </div>
-            <button onclick="contactOwner('طلب انضمام مشروع')" class="w-full bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark hover:opacity-90 font-black py-4 rounded-2xl text-xs sm:text-sm shadow-lg silk-transition flex items-center justify-center gap-2 active:scale-98">
+            <button onclick="contactOwner('طلب انضمام مشروع')" class="w-full bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark hover:opacity-90 font-black py-3 rounded-2xl text-xs shadow-lg silk-transition flex items-center justify-center gap-2 active:scale-98">
                 <span>تواصل مع فريق مَلاذ عبر واتساب</span>
                 <span>➔</span>
             </button>
         </div>
-        <p class="text-center text-xs sm:text-sm text-emerald-800 dark:text-emerald-100/70 font-bold mt-5">
+        <p class="text-center text-[10px] text-emerald-800 dark:text-emerald-100/60 font-bold mt-4">
             © 2026 نافذتك لاكتشاف أفضل ما في اللقية.
         </p>
     </footer>
 
     <!-- النافذة المنبثقة للطلب/التجهيز -->
     <div id="info-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white dark:bg-maladhCard rounded-3xl max-w-sm w-full p-7 text-center border border-emeraldAncient/20 dark:border-emeraldLight/40 shadow-2xl space-y-5 relative">
-            <div class="w-24 h-24 rounded-full mx-auto p-1 bg-gradient-to-tr from-emeraldAncient via-emeraldLight to-emeraldDark emerald-glow">
+        <div class="bg-white dark:bg-maladhCard rounded-3xl max-w-xs w-full p-6 text-center border border-emeraldAncient/20 dark:border-emeraldLight/40 shadow-2xl space-y-4 relative">
+            <div class="w-20 h-20 rounded-full mx-auto p-1 bg-gradient-to-tr from-emeraldAncient via-emeraldLight to-emeraldDark emerald-glow">
                 <img id="modal-shop-image" src="" alt="شعار المحل" class="w-full h-full rounded-full object-cover">
             </div>
             <div>
-                <h3 id="modal-shop-name" class="text-xl font-black text-emeraldDark dark:text-white"></h3>
-                <span id="modal-shop-cat" class="inline-block mt-2 text-xs sm:text-sm bg-emeraldLight/20 text-emeraldAncient dark:text-emerald-100 px-3.5 py-1 rounded-full font-bold border border-emeraldLight/30"></span>
+                <h3 id="modal-shop-name" class="text-lg font-black text-emeraldDark dark:text-white"></h3>
+                <span id="modal-shop-cat" class="inline-block mt-1 text-[10px] bg-emeraldLight/20 text-emeraldAncient dark:text-emerald-100 px-3 py-0.5 rounded-full font-bold border border-emeraldLight/30"></span>
             </div>
-            <p id="modal-shop-desc" class="text-xs sm:text-sm text-emerald-900 dark:text-emerald-100/90 leading-relaxed bg-gray-100 dark:bg-emeraldDark/40 p-4.5 rounded-2xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-right font-medium"></p>
-            <div class="flex gap-3">
-                <button id="modal-open-link" class="flex-1 bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark font-black py-3.5 rounded-2xl text-xs sm:text-sm shadow-lg silk-transition">
+            <p id="modal-shop-desc" class="text-xs text-emerald-900 dark:text-emerald-100/90 leading-relaxed bg-gray-100 dark:bg-emeraldDark/40 p-3.5 rounded-2xl border border-emeraldAncient/10 dark:border-emeraldLight/20 text-right font-medium"></p>
+            <div class="flex gap-2">
+                <button id="modal-open-link" class="flex-1 bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark font-black py-2.5 rounded-2xl text-xs shadow-lg silk-transition">
                     دخول الموقع الآن ➔
                 </button>
-                <button onclick="closeInfoModal()" class="px-5 bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white font-bold py-3.5 rounded-2xl text-xs sm:text-sm">
+                <button onclick="closeInfoModal()" class="px-4 bg-gray-200 dark:bg-white/10 text-gray-800 dark:text-white font-bold py-2.5 rounded-2xl text-xs">
                     إغلاق
                 </button>
             </div>
@@ -257,12 +257,12 @@
 
     <!-- نافذة اختيارات الفروع -->
     <div id="branch-modal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-white dark:bg-maladhCard rounded-3xl max-w-sm w-full p-7 text-center border border-emeraldAncient/20 dark:border-emeraldLight/40 shadow-2xl space-y-5">
-            <div class="w-14 h-14 bg-emeraldLight/20 text-emeraldAncient dark:text-white rounded-full flex items-center justify-center text-2xl mx-auto border border-emeraldLight/30">
+        <div class="bg-white dark:bg-maladhCard rounded-3xl max-w-xs w-full p-5 text-center border border-emeraldAncient/20 dark:border-emeraldLight/40 shadow-2xl space-y-3">
+            <div class="w-10 h-10 bg-emeraldLight/20 text-emeraldAncient dark:text-white rounded-full flex items-center justify-center text-xl mx-auto border border-emeraldLight/30">
                 📍
             </div>
-            <h3 class="text-lg sm:text-xl font-black text-emeraldDark dark:text-white">اختر فرع مَلاذ</h3>
-            <div id="branches-list" class="space-y-3 max-h-60 overflow-y-auto"></div>
+            <h3 class="text-base font-bold text-emeraldDark dark:text-white">اختر فرع مَلاذ</h3>
+            <div id="branches-list" class="space-y-2 max-h-52 overflow-y-auto"></div>
         </div>
     </div>
 
@@ -309,7 +309,7 @@
                     category: "كافيهات",
                     description: "قهوة ذات جودة عالية ونكهة خاصة لأصحاب الذوق الرفيع.",
                     image: "https://i.imgur.com/Dm82D7G.jpeg",
-                    url: "https://albraka-netizen.github.io/coffeeok/",
+                    url: "https://albraka-netizen.github.io/okaad/#categories-section",
                     isVIP: false,
                     isPending: false,
                     rating: "",
@@ -342,8 +342,8 @@
         function initBranchesModal() {
             const list = document.getElementById('branches-list');
             list.innerHTML = platformData.branches.map(b => `
-                <button onclick="selectBranch('${b.id}')" class="w-full p-4 rounded-2xl text-xs sm:text-sm font-bold flex items-center justify-between silk-transition ${b.id === currentBranchId ? 'bg-emeraldAncient text-white dark:bg-white dark:text-emeraldDark shadow-md' : 'bg-gray-100 text-emeraldDark dark:bg-emeraldDark/60 dark:text-white border border-emeraldAncient/10 dark:border-emeraldLight/20'}">
-                    <span>📍 فرع ${b.name} ${!b.active ? '<span class="text-[10px] bg-emeraldLight/30 text-emeraldAncient dark:text-emerald-100 px-2 py-0.5 rounded-full mr-2">قريباً</span>' : ''}</span>
+                <button onclick="selectBranch('${b.id}')" class="w-full p-3.5 rounded-2xl text-xs font-bold flex items-center justify-between silk-transition ${b.id === currentBranchId ? 'bg-emeraldAncient text-white dark:bg-white dark:text-emeraldDark shadow-md' : 'bg-gray-100 text-emeraldDark dark:bg-emeraldDark/60 dark:text-white border border-emeraldAncient/10 dark:border-emeraldLight/20'}">
+                    <span>📍 فرع ${b.name} ${!b.active ? '<span class="text-[9px] bg-emeraldLight/30 text-emeraldAncient dark:text-emerald-100 px-2 py-0.5 rounded-full mr-1">قريباً</span>' : ''}</span>
                     <span>➔</span>
                 </button>
             `).join('');
@@ -402,9 +402,9 @@
             
             container.innerHTML = defaultCategories.map(cat => `
                 <button onclick="setCategory('${cat}')" 
-                    class="px-5 py-3 rounded-2xl text-xs sm:text-sm font-bold silk-transition whitespace-nowrap shrink-0 ${
+                    class="px-4 py-2 rounded-2xl text-[11px] font-bold silk-transition whitespace-nowrap shrink-0 ${
                         cat === currentCategory 
-                        ? 'bg-emeraldAncient text-white dark:bg-white dark:text-emeraldDark shadow-lg shadow-emeraldLight/25' 
+                        ? 'bg-emeraldAncient text-white dark:bg-white dark:text-emeraldDark shadow-lg shadow-emeraldLight/20' 
                         : 'bg-white dark:bg-maladhCard text-emeraldDark dark:text-white border border-emeraldAncient/20 dark:border-emeraldLight/30'
                     }">
                     ${cat}
@@ -435,21 +435,21 @@
 
             if (matches.length > 0) {
                 dropdown.innerHTML = matches.map(shop => `
-                    <div onclick="handleShopClick(${shop.id})" class="flex items-center gap-4 p-4 hover:bg-emeraldLight/10 dark:hover:bg-emeraldDark/40 cursor-pointer border-b border-emeraldAncient/10 dark:border-emeraldLight/20 last:border-none">
-                        <img src="${shop.image}" alt="${shop.name}" class="w-12 h-12 rounded-full object-cover">
+                    <div onclick="handleShopClick(${shop.id})" class="flex items-center gap-3 p-3 hover:bg-emeraldLight/10 dark:hover:bg-emeraldDark/40 cursor-pointer border-b border-emeraldAncient/10 dark:border-emeraldLight/20 last:border-none">
+                        <img src="${shop.image}" alt="${shop.name}" class="w-10 h-10 rounded-full object-cover">
                         <div class="flex-1 text-right">
-                            <h4 class="text-xs sm:text-sm font-bold text-emeraldDark dark:text-white flex items-center gap-2">
+                            <h4 class="text-xs font-bold text-emeraldDark dark:text-white flex items-center gap-1">
                                 ${shop.name}
-                                ${shop.isPending ? '<span class="text-[10px] bg-amber-500/20 text-amber-600 dark:text-amber-300 px-2 py-0.5 rounded-full">قيد التجهيز</span>' : ''}
+                                ${shop.isPending ? '<span class="text-[8px] bg-amber-500/20 text-amber-600 dark:text-amber-300 px-1.5 py-0.2 rounded-full">قيد التجهيز</span>' : ''}
                             </h4>
-                            <p class="text-xs text-emerald-800 dark:text-emerald-100/70 font-bold mt-0.5">${shop.category}</p>
+                            <p class="text-[9px] text-emerald-800 dark:text-emerald-100/60 font-bold">${shop.category}</p>
                         </div>
-                        <span class="text-xs sm:text-sm text-emeraldAncient dark:text-white font-bold">${shop.isPending ? 'معاينة' : 'فتح ➔'}</span>
+                        <span class="text-[10px] text-emeraldAncient dark:text-white font-bold">${shop.isPending ? 'معاينة' : 'فتح ➔'}</span>
                     </div>
                 `).join('');
                 dropdown.classList.remove('hidden');
             } else {
-                dropdown.innerHTML = `<div class="p-5 text-center text-xs sm:text-sm text-emerald-800 dark:text-emerald-100/70 font-bold">لا توجد نتائج مطابقة</div>`;
+                dropdown.innerHTML = `<div class="p-3 text-center text-xs text-emerald-800 dark:text-emerald-100/60 font-bold">لا توجد نتائج مطابقة</div>`;
                 dropdown.classList.remove('hidden');
             }
 
@@ -470,7 +470,7 @@
                 const openBtn = document.getElementById('modal-open-link');
                 openBtn.textContent = "الموقع قيد التجهيز";
                 openBtn.onclick = null;
-                openBtn.className = "flex-1 bg-gray-300 dark:bg-white/20 text-gray-500 dark:text-gray-400 font-bold py-3.5 rounded-2xl text-xs sm:text-sm cursor-not-allowed";
+                openBtn.className = "flex-1 bg-gray-300 dark:bg-white/20 text-gray-500 dark:text-gray-400 font-bold py-2.5 rounded-2xl text-xs cursor-not-allowed";
                 
                 document.getElementById('info-modal').classList.remove('hidden');
             } else if (shop.hasPreviewModal) {
@@ -481,7 +481,7 @@
                 
                 const openBtn = document.getElementById('modal-open-link');
                 openBtn.textContent = "دخول الموقع الآن ➔";
-                openBtn.className = "flex-1 bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark font-black py-3.5 rounded-2xl text-xs sm:text-sm shadow-lg silk-transition";
+                openBtn.className = "flex-1 bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark font-black py-2.5 rounded-2xl text-xs shadow-lg silk-transition";
                 openBtn.onclick = () => window.open(shop.url, '_blank');
                 
                 document.getElementById('info-modal').classList.remove('hidden');
@@ -506,11 +506,11 @@
             
             if (currentBranch && !currentBranch.active) {
                 container.innerHTML = `
-                    <div class="col-span-full text-center py-14 px-4 maladh-glass rounded-3xl shadow-xl">
-                        <span class="text-4xl mb-3 inline-block">⏳</span>
-                        <h3 class="text-base sm:text-lg font-bold mb-2 text-emeraldDark dark:text-white">قريباً في فرع ${currentBranch.name}</h3>
-                        <p class="text-emerald-800 dark:text-emerald-100/70 text-xs sm:text-sm max-w-xs mx-auto mb-6 font-bold">يتم تجهيز فرع مَلاذ ليكون متاحاً قريباً جداً.</p>
-                        <button onclick="contactOwner('تسجيل متجر بالفرع')" class="bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark font-bold px-6 py-3 rounded-full text-xs sm:text-sm shadow-md">
+                    <div class="col-span-full text-center py-10 px-4 maladh-glass rounded-3xl shadow-xl">
+                        <span class="text-3xl mb-2 inline-block">⏳</span>
+                        <h3 class="text-sm font-bold mb-1 text-emeraldDark dark:text-white">قريباً في فرع ${currentBranch.name}</h3>
+                        <p class="text-emerald-800 dark:text-emerald-100/60 text-[10px] max-w-xs mx-auto mb-4 font-bold">يتم تجهيز فرع مَلاذ ليكون متاحاً قريباً جداً.</p>
+                        <button onclick="contactOwner('تسجيل متجر بالفرع')" class="bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark font-bold px-4 py-2 rounded-full text-[10px]">
                             انضم إلى مَلاذ 💬
                         </button>
                     </div>
@@ -523,45 +523,45 @@
 
             if (listToRender.length === 0) {
                 container.innerHTML = `
-                    <div class="col-span-full text-center py-14 text-emerald-800 dark:text-emerald-100/70 font-bold">
-                        <p class="text-3xl mb-2">🔍</p>
-                        <p class="text-xs sm:text-sm">لا توجد محلات في هذه الفئة حالياً</p>
+                    <div class="col-span-full text-center py-10 text-emerald-800 dark:text-emerald-100/60 font-bold">
+                        <p class="text-2xl mb-1">🔍</p>
+                        <p class="text-xs">لا توجد محلات في هذه الفئة حالياً</p>
                     </div>
                 `;
                 return;
             }
 
             container.innerHTML = listToRender.map(shop => `
-                <div onclick="handleShopClick(${shop.id})" class="group cursor-pointer flex flex-col items-center text-center space-y-3">
+                <div onclick="handleShopClick(${shop.id})" class="group cursor-pointer flex flex-col items-center text-center space-y-2">
                     
-                    <div class="relative w-28 h-28 sm:w-32 sm:h-32 rounded-full p-[2px] bg-gradient-to-tr from-emeraldAncient via-emeraldLight to-emeraldDark emerald-glow silk-transition group-hover:scale-105 group-active:scale-95">
+                    <div class="relative w-20 h-20 sm:w-24 sm:h-24 rounded-full p-[2px] bg-gradient-to-tr from-emeraldAncient via-emeraldLight to-emeraldDark emerald-glow silk-transition group-hover:scale-105 group-active:scale-95">
                         
                         <div class="w-full h-full rounded-full overflow-hidden relative bg-emeraldDark border-2 border-white dark:border-emeraldDark">
                             <img src="${shop.image}" alt="${shop.name}" class="w-full h-full object-cover silk-transition group-hover:scale-110 ${shop.isPending ? 'opacity-70 grayscale-[30%]' : ''}">
                             
                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                             
-                            <span class="absolute bottom-2 inset-x-0 text-center text-[10px] font-black text-white">
+                            <span class="absolute bottom-1 inset-x-0 text-center text-[8px] font-black text-white">
                                 ${shop.isPending ? 'قريباً' : shop.rating}
                             </span>
                         </div>
 
                         ${shop.isPending ? `
-                            <span class="absolute -top-1 -right-1 bg-amber-500 text-white font-black text-[9px] px-3 py-0.5 rounded-full shadow-md border border-white dark:border-emeraldAncient">
+                            <span class="absolute -top-1 -right-1 bg-amber-500 text-white font-black text-[7px] px-2 py-0.5 rounded-full shadow-md border border-white dark:border-emeraldAncient">
                                 قيد التجهيز
                             </span>
                         ` : shop.isVIP ? `
-                            <span class="absolute -top-1 -right-1 bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark font-black text-[9px] px-3 py-0.5 rounded-full shadow-md border border-white dark:border-emeraldAncient">
+                            <span class="absolute -top-1 -right-1 bg-emeraldAncient dark:bg-white text-white dark:text-emeraldDark font-black text-[7px] px-2 py-0.5 rounded-full shadow-md border border-white dark:border-emeraldAncient">
                                 VIP
                             </span>
                         ` : ''}
                     </div>
 
                     <div class="w-full px-1">
-                        <h3 class="text-xs sm:text-sm font-black text-emeraldDark dark:text-white truncate group-hover:text-emeraldLight silk-transition">
+                        <h3 class="text-[11px] sm:text-xs font-black text-emeraldDark dark:text-white truncate group-hover:text-emeraldLight silk-transition">
                             ${shop.name}
                         </h3>
-                        <span class="text-[10px] sm:text-xs text-emerald-800 dark:text-emerald-100/70 font-bold block truncate mt-0.5">
+                        <span class="text-[9px] text-emerald-800 dark:text-emerald-100/60 font-bold block truncate">
                             ${shop.category}
                         </span>
                     </div>
